@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "fakenews-754c0"
+  },
+  "targets": {
+    "FakeNews": {
+      "hosting": {
+        "superfakenews": [
+          "superfakenews"
+        ]
+      }
+    }
+  }
+}

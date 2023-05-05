@@ -1,75 +1,74 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/_app";
-exports.ids = ["pages/_app"];
+exports.id = 888;
+exports.ids = [888];
 exports.modules = {
 
-/***/ "./components/Footer.js":
-/*!******************************!*\
-  !*** ./components/Footer.js ***!
-  \******************************/
+/***/ 181:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\nconst Footer = ()=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            children: \"Copyright\"\n        }, void 0, false, {\n            fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Footer.js\",\n            lineNumber: 3,\n            columnNumber: 3\n        }, undefined)\n    }, void 0, false);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0Zvb3Rlci5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUEsTUFBTUEsU0FBUyxJQUFJO0lBQ2pCLHFCQUFPO2tCQUNQLDRFQUFDQztzQkFBSTs7Ozs7OztBQUVQO0FBQ0EsaUVBQWVELE1BQU1BLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZXh0bmV3cy8uL2NvbXBvbmVudHMvRm9vdGVyLmpzP2UxYWIiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgRm9vdGVyID0gKCk9PntcclxuICByZXR1cm4gPD5cclxuICA8ZGl2PkNvcHlyaWdodDwvZGl2PlxyXG4gIDwvPlxyXG59O1xyXG5leHBvcnQgZGVmYXVsdCBGb290ZXI7Il0sIm5hbWVzIjpbIkZvb3RlciIsImRpdiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/Footer.js\n");
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ App)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+// EXTERNAL MODULE: ./styles/globals.css
+var globals = __webpack_require__(764);
+// EXTERNAL MODULE: ./components/Nav.js
+var components_Nav = __webpack_require__(424);
+;// CONCATENATED MODULE: ./components/Footer.js
+
+const Footer_Footer = ()=>{
+    return /*#__PURE__*/ _jsx(_Fragment, {
+        children: /*#__PURE__*/ _jsx("div", {
+            children: "Copyright"
+        })
+    });
+};
+/* harmony default export */ const components_Footer = ((/* unused pure expression or super */ null && (Footer_Footer)));
+
+;// CONCATENATED MODULE: ./components/Layout.js
+
+
+
+const Layout = ({ children  })=>{
+    return /*#__PURE__*/ _jsxs(_Fragment, {
+        children: [
+            /*#__PURE__*/ _jsx(Nav, {}),
+            children,
+            /*#__PURE__*/ _jsx(Footer, {})
+        ]
+    });
+};
+/* harmony default export */ const components_Layout = ((/* unused pure expression or super */ null && (Layout)));
+
+;// CONCATENATED MODULE: ./pages/_app.js
+
+
+
+function App({ Component , pageProps  }) {
+    return /*#__PURE__*/ jsx_runtime_.jsx(Component, {
+        ...pageProps
+    });
+}
+
 
 /***/ }),
 
-/***/ "./components/Layout.js":
-/*!******************************!*\
-  !*** ./components/Layout.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Nav */ \"./components/Nav.js\");\n/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ \"./components/Footer.js\");\n\n\n\nconst Layout = ({ children  })=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Nav__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {}, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Layout.js\",\n                lineNumber: 6,\n                columnNumber: 5\n            }, undefined),\n            children,\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Footer__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {}, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Layout.js\",\n                lineNumber: 8,\n                columnNumber: 5\n            }, undefined)\n        ]\n    }, void 0, true);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0xheW91dC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBd0I7QUFDTTtBQUM5QixNQUFNRSxTQUFTLENBQUMsRUFBQ0MsU0FBUSxFQUFDLEdBQUc7SUFDM0IscUJBQ0U7OzBCQUNBLDhEQUFDSCw0Q0FBR0E7Ozs7O1lBQ0hHOzBCQUNELDhEQUFDRiwrQ0FBTUE7Ozs7Ozs7QUFHWDtBQUNBLGlFQUFlQyxNQUFNQSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbmV4dG5ld3MvLi9jb21wb25lbnRzL0xheW91dC5qcz81MTVjIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBOYXYgZnJvbSBcIi4vTmF2XCI7XHJcbmltcG9ydCBGb290ZXIgZnJvbSBcIi4vRm9vdGVyXCI7XHJcbmNvbnN0IExheW91dCA9ICh7Y2hpbGRyZW59KT0+e1xyXG4gIHJldHVybihcclxuICAgIDw+XHJcbiAgICA8TmF2Lz5cclxuICAgIHtjaGlsZHJlbn1cclxuICAgIDxGb290ZXIvPlxyXG4gICAgPC8+XHJcbiAgKVxyXG59XHJcbmV4cG9ydCBkZWZhdWx0IExheW91dDsiXSwibmFtZXMiOlsiTmF2IiwiRm9vdGVyIiwiTGF5b3V0IiwiY2hpbGRyZW4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/Layout.js\n");
-
-/***/ }),
-
-/***/ "./components/Nav.js":
-/*!***************************!*\
-  !*** ./components/Nav.js ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_icons_ai__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-icons/ai */ \"react-icons/ai\");\n/* harmony import */ var react_icons_ai__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_icons_ai__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var primereact_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primereact/dropdown */ \"primereact/dropdown\");\n/* harmony import */ var primereact_dropdown__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(primereact_dropdown__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nconst Nav = ({ setType , popUpToggle  })=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"w-1/3\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                    className: \"h-[50px] md:h-[70px]\",\n                    src: \"banner.jpg\"\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                    lineNumber: 11,\n                    columnNumber: 30\n                }, undefined)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                lineNumber: 11,\n                columnNumber: 7\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: ` flex flex-row p-2 font-kanit border-b-4 border-red-500  justify-between w-screen px-4 text-sm md:text-xl cursor-pointer ${popUpToggle === true ? \"backdrop blur-sm\" : \"\"}`,\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        onClick: ()=>setType([]),\n                        className: \"active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6\",\n                        children: \"หน้าแรก\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                        lineNumber: 13,\n                        columnNumber: 7\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        onClick: ()=>setType(\"เรื่องฮอต\"),\n                        className: \"active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6\",\n                        children: \"เรื่องฮอต\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                        lineNumber: 14,\n                        columnNumber: 7\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        onClick: ()=>setType(\"บันเทิง\"),\n                        className: \"active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6\",\n                        children: \"บันเทิง\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                        lineNumber: 15,\n                        columnNumber: 7\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        onClick: ()=>setType(\"กีฬา\"),\n                        className: \"active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6\",\n                        children: \"กีฬา\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                        lineNumber: 16,\n                        columnNumber: 7\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        onClick: ()=>setType(\"รถยนต์\"),\n                        className: \"active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6\",\n                        children: \"รถยนต์\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                        lineNumber: 17,\n                        columnNumber: 7\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        onClick: ()=>setType(\"ไอที\"),\n                        className: \"active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6\",\n                        children: \"ไอที\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                        lineNumber: 18,\n                        columnNumber: 7\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"md:mr-7\",\n                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"select\", {\n                            onChange: (e)=>setType(e.target.value),\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"option\", {\n                                    children: \"เรื่องฮอต\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                                    lineNumber: 25,\n                                    columnNumber: 11\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"option\", {\n                                    children: \"บันเทิง\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                                    lineNumber: 26,\n                                    columnNumber: 11\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"option\", {\n                                    children: \"กีฬา\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                                    lineNumber: 27,\n                                    columnNumber: 11\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"option\", {\n                                    children: \"รถยนต์\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                                    lineNumber: 28,\n                                    columnNumber: 11\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"option\", {\n                                    children: \"ไอที\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                                    lineNumber: 29,\n                                    columnNumber: 11\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                            lineNumber: 24,\n                            columnNumber: 9\n                        }, undefined)\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                        lineNumber: 23,\n                        columnNumber: 9\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\components\\\\Nav.js\",\n                lineNumber: 12,\n                columnNumber: 7\n            }, undefined)\n        ]\n    }, void 0, true);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Nav);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL05hdi5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7O0FBQStDO0FBQ1A7QUFDTztBQUcvQyxNQUFNSSxNQUFNLENBQUMsRUFBQ0MsUUFBTyxFQUFDQyxZQUFXLEVBQUMsR0FBSztJQUdyQyxxQkFDRTs7MEJBQ0UsOERBQUNDO2dCQUFJQyxXQUFVOzBCQUFRLDRFQUFDQztvQkFBSUQsV0FBVTtvQkFBdUJFLEtBQUk7Ozs7Ozs7Ozs7OzBCQUNqRSw4REFBQ0g7Z0JBQUlDLFdBQVcsQ0FBQyx5SEFBeUgsRUFBRUYsZ0JBQWdCLElBQUksR0FBRSxxQkFBbUIsRUFBRSxDQUFDLENBQUM7O2tDQUN6TCw4REFBQ0M7d0JBQUlJLFNBQVMsSUFBSU4sUUFBUSxFQUFFO3dCQUFHRyxXQUFVO2tDQUE2RDs7Ozs7O2tDQUN0Ryw4REFBQ0Q7d0JBQUlJLFNBQVMsSUFBSU4sUUFBUTt3QkFBY0csV0FBVTtrQ0FBNkQ7Ozs7OztrQ0FDL0csOERBQUNEO3dCQUFJSSxTQUFTLElBQUlOLFFBQVE7d0JBQVlHLFdBQVU7a0NBQTZEOzs7Ozs7a0NBQzdHLDhEQUFDRDt3QkFBSUksU0FBUyxJQUFJTixRQUFRO3dCQUFTRyxXQUFVO2tDQUE2RDs7Ozs7O2tDQUMxRyw4REFBQ0Q7d0JBQUlJLFNBQVMsSUFBSU4sUUFBUTt3QkFBV0csV0FBVTtrQ0FBNkQ7Ozs7OztrQ0FDNUcsOERBQUNEO3dCQUFJSSxTQUFTLElBQUlOLFFBQVE7d0JBQVNHLFdBQVU7a0NBQTZEOzs7Ozs7a0NBS3hHLDhEQUFDRDt3QkFBSUMsV0FBVTtrQ0FDZiw0RUFBQ0k7NEJBQU9DLFVBQVUsQ0FBQ0MsSUFBSVQsUUFBUVMsRUFBRUMsTUFBTSxDQUFDQyxLQUFLOzs4Q0FDM0MsOERBQUNDOzhDQUFPOzs7Ozs7OENBQ1IsOERBQUNBOzhDQUFPOzs7Ozs7OENBQ1IsOERBQUNBOzhDQUFPOzs7Ozs7OENBQ1IsOERBQUNBOzhDQUFPOzs7Ozs7OENBQ1IsOERBQUNBOzhDQUFPOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBTWxCO0FBQ0EsaUVBQWViLEdBQUdBLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZXh0bmV3cy8uL2NvbXBvbmVudHMvTmF2LmpzPzg2NGEiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQWlPdXRsaW5lQmFycyB9IGZyb20gXCJyZWFjdC1pY29ucy9haVwiO1xyXG5pbXBvcnQgUmVhY3QsIHsgdXNlU3RhdGUgfSBmcm9tIFwicmVhY3RcIjtcclxuaW1wb3J0IHsgRHJvcGRvd24gfSBmcm9tICdwcmltZXJlYWN0L2Ryb3Bkb3duJztcclxuXHJcblxyXG5jb25zdCBOYXYgPSAoe3NldFR5cGUscG9wVXBUb2dnbGV9KSA9PiB7XHJcblxyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPD5cclxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTEvM1wiPjxpbWcgY2xhc3NOYW1lPVwiaC1bNTBweF0gbWQ6aC1bNzBweF1cIiBzcmM9XCJiYW5uZXIuanBnXCIvPjwvZGl2PlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT17YCBmbGV4IGZsZXgtcm93IHAtMiBmb250LWthbml0IGJvcmRlci1iLTQgYm9yZGVyLXJlZC01MDAgIGp1c3RpZnktYmV0d2VlbiB3LXNjcmVlbiBweC00IHRleHQtc20gbWQ6dGV4dC14bCBjdXJzb3ItcG9pbnRlciAke3BvcFVwVG9nZ2xlID09PSB0cnVlID9cImJhY2tkcm9wIGJsdXItc21cIjpcIlwifWB9PlxyXG4gICAgICA8ZGl2IG9uQ2xpY2s9eygpPT5zZXRUeXBlKFtdKX0gY2xhc3NOYW1lPVwiYWN0aXZlOmJnLXJlZC02MDAgaG92ZXI6YmctcmVkLTUwMCBweC0xIHJvdW5kZWQtbGcgbWQ6cHgtNlwiPuC4q+C4meC5ieC4suC5geC4o+C4gTwvZGl2PlxyXG4gICAgICA8ZGl2IG9uQ2xpY2s9eygpPT5zZXRUeXBlKFwi4LmA4Lij4Li34LmI4Lit4LiH4Liu4Lit4LiVXCIpfSBjbGFzc05hbWU9XCJhY3RpdmU6YmctcmVkLTYwMCBob3ZlcjpiZy1yZWQtNTAwIHB4LTEgcm91bmRlZC1sZyBtZDpweC02XCI+4LmA4Lij4Li34LmI4Lit4LiH4Liu4Lit4LiVPC9kaXY+XHJcbiAgICAgIDxkaXYgb25DbGljaz17KCk9PnNldFR5cGUoXCLguJrguLHguJnguYDguJfguLTguIdcIil9IGNsYXNzTmFtZT1cImFjdGl2ZTpiZy1yZWQtNjAwIGhvdmVyOmJnLXJlZC01MDAgcHgtMSByb3VuZGVkLWxnIG1kOnB4LTZcIj7guJrguLHguJnguYDguJfguLTguIc8L2Rpdj5cclxuICAgICAgPGRpdiBvbkNsaWNrPXsoKT0+c2V0VHlwZShcIuC4geC4teC4rOC4slwiKX0gY2xhc3NOYW1lPVwiYWN0aXZlOmJnLXJlZC02MDAgaG92ZXI6YmctcmVkLTUwMCBweC0xIHJvdW5kZWQtbGcgbWQ6cHgtNlwiPuC4geC4teC4rOC4sjwvZGl2PlxyXG4gICAgICA8ZGl2IG9uQ2xpY2s9eygpPT5zZXRUeXBlKFwi4Lij4LiW4Lii4LiZ4LiV4LmMXCIpfSBjbGFzc05hbWU9XCJhY3RpdmU6YmctcmVkLTYwMCBob3ZlcjpiZy1yZWQtNTAwIHB4LTEgcm91bmRlZC1sZyBtZDpweC02XCI+4Lij4LiW4Lii4LiZ4LiV4LmMPC9kaXY+XHJcbiAgICAgIDxkaXYgb25DbGljaz17KCk9PnNldFR5cGUoXCLguYTguK3guJfguLVcIil9IGNsYXNzTmFtZT1cImFjdGl2ZTpiZy1yZWQtNjAwIGhvdmVyOmJnLXJlZC01MDAgcHgtMSByb3VuZGVkLWxnIG1kOnB4LTZcIj7guYTguK3guJfguLU8L2Rpdj5cclxuICAgICBcclxuICAgICAgICB7LyogPGRpdiBjbGFzc05hbWU9XCJteS1hdXRvIG1yLTJcIj5cclxuICAgICAgICAgIDxBaU91dGxpbmVCYXJzIGNsYXNzTmFtZT1cInRleHQteGxcIi8+XHJcbiAgICAgICAgPC9kaXY+ICovfVxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWQ6bXItN1wiPlxyXG4gICAgICAgIDxzZWxlY3Qgb25DaGFuZ2U9eyhlKT0+c2V0VHlwZShlLnRhcmdldC52YWx1ZSl9PlxyXG4gICAgICAgICAgPG9wdGlvbj7guYDguKPguLfguYjguK3guIfguK7guK3guJU8L29wdGlvbj5cclxuICAgICAgICAgIDxvcHRpb24+4Lia4Lix4LiZ4LmA4LiX4Li04LiHPC9vcHRpb24+XHJcbiAgICAgICAgICA8b3B0aW9uPuC4geC4teC4rOC4sjwvb3B0aW9uPlxyXG4gICAgICAgICAgPG9wdGlvbj7guKPguJbguKLguJnguJXguYw8L29wdGlvbj5cclxuICAgICAgICAgIDxvcHRpb24+4LmE4Lit4LiX4Li1PC9vcHRpb24+XHJcbiAgICAgICAgPC9zZWxlY3Q+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgPC8+XHJcbiAgKTtcclxufTtcclxuZXhwb3J0IGRlZmF1bHQgTmF2O1xyXG4iXSwibmFtZXMiOlsiQWlPdXRsaW5lQmFycyIsIlJlYWN0IiwidXNlU3RhdGUiLCJEcm9wZG93biIsIk5hdiIsInNldFR5cGUiLCJwb3BVcFRvZ2dsZSIsImRpdiIsImNsYXNzTmFtZSIsImltZyIsInNyYyIsIm9uQ2xpY2siLCJzZWxlY3QiLCJvbkNoYW5nZSIsImUiLCJ0YXJnZXQiLCJ2YWx1ZSIsIm9wdGlvbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/Nav.js\n");
-
-/***/ }),
-
-/***/ "./pages/_app.js":
-/*!***********************!*\
-  !*** ./pages/_app.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ App)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/styles/globals.css */ \"./styles/globals.css\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/Layout */ \"./components/Layout.js\");\n\n\n\nfunction App({ Component , pageProps  }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n        ...pageProps\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Kulna\\\\FakeNews\\\\news\\\\pages\\\\_app.js\",\n        lineNumber: 8,\n        columnNumber: 7\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9fYXBwLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBOEI7QUFDVztBQUUxQixTQUFTQyxJQUFJLEVBQUVDLFVBQVMsRUFBRUMsVUFBUyxFQUFFLEVBQUU7SUFDcEQscUJBR0ksOERBQUNEO1FBQVcsR0FBR0MsU0FBUzs7Ozs7O0FBRzlCLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZXh0bmV3cy8uL3BhZ2VzL19hcHAuanM/ZTBhZCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgXCJAL3N0eWxlcy9nbG9iYWxzLmNzc1wiO1xuaW1wb3J0IExheW91dCBmcm9tIFwiQC9jb21wb25lbnRzL0xheW91dFwiO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBBcHAoeyBDb21wb25lbnQsIHBhZ2VQcm9wcyB9KSB7XG4gIHJldHVybiAoXG4gICBcbiAgICAgXG4gICAgICA8Q29tcG9uZW50IHsuLi5wYWdlUHJvcHN9IC8+XG4gIFxuICApO1xufVxuIl0sIm5hbWVzIjpbIkxheW91dCIsIkFwcCIsIkNvbXBvbmVudCIsInBhZ2VQcm9wcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/_app.js\n");
-
-/***/ }),
-
-/***/ "./styles/globals.css":
-/*!****************************!*\
-  !*** ./styles/globals.css ***!
-  \****************************/
+/***/ 764:
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ "primereact/dropdown":
-/*!**************************************!*\
-  !*** external "primereact/dropdown" ***!
-  \**************************************/
+/***/ 404:
 /***/ ((module) => {
 
 "use strict";
@@ -77,10 +76,7 @@ module.exports = require("primereact/dropdown");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 689:
 /***/ ((module) => {
 
 "use strict";
@@ -88,10 +84,7 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-icons/ai":
-/*!*********************************!*\
-  !*** external "react-icons/ai" ***!
-  \*********************************/
+/***/ 847:
 /***/ ((module) => {
 
 "use strict";
@@ -99,14 +92,11 @@ module.exports = require("react-icons/ai");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
+/***/ 997:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-dev-runtime");
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -117,7 +107,7 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/_app.js"));
+var __webpack_exports__ = __webpack_require__.X(0, [955], () => (__webpack_exec__(181)));
 module.exports = __webpack_exports__;
 
 })();

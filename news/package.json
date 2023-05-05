@@ -6,13 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy:firebase": "gcloud config set project fakenews-754c0 && npx firebase deploy --only hosting:superfakenews",
+    "build:firebase": "yarn run build && yarn run deploy:firebase"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.21.0",
     "autoprefixer": "10.4.14",
     "axios": "^1.3.6",
     "dotenv": "^16.0.3",
+    "firebase": "^9.21.0",
     "next": "13.3.1",
     "postcss": "8.4.23",
     "primereact": "^9.3.0",
