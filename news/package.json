@@ -6,9 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy:firebase": "gcloud config set project fakenews-754c0 && npx firebase deploy --only hosting:superfakenews",
-    "build:firebase": "yarn run build && yarn run deploy:firebase"
+    "lint": "next lint"
+
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.21.0",
