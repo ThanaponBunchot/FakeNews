@@ -1,55 +1,20 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import supabase from "@/components/supabaseClient";
 import Nav from "@/components/Nav";
 import { AiFillSignal } from "react-icons/ai";
 import Popup from "@/components/Popup";
-import { Dropdown } from 'primereact/dropdown';
-        
+import { Dropdown } from "primereact/dropdown";
+import months from "./months.json";
+import thaiDay from "./thaiDay.json";
 
 const Home = () => {
-  const thaiMonths = [
-    "มกราคม",
-    "กุมภาพันธ์",
-    "มีนาคม",
-    "เมษายน",
-    "พฤษภาคม",
-    "มิถุนายน",
-    "กรกฎาคม",
-    "สิงหาคม",
-    "กันยายน",
-    "ตุลาคม",
-    "พฤศจิกายน",
-    "ธันวาคม",
-  ];
-  const thaiDays = [
-    "อาทิตย์",
-    "จันทร์",
-    "อังคาร",
-    "พุธ",
-    "พฤหัสบดี",
-    "ศุกร์",
-    "เสาร์",
-  ];
   const date = new Date();
   const day = date.getDate();
   const monthIndex = date.getMonth();
   const year = date.getFullYear() + 543;
   const dayIndex = date.getDay();
-  const thaiDayString = thaiDays[dayIndex];
-
-  const thaiDateString =
-    "วัน" +
-    thaiDayString +
-    "ที่" +
-    " " +
-    day +
-    " " +
-    thaiMonths[monthIndex] +
-    " " +
-    year;
+  const thaiDayString = thaiDay.thaiDays[dayIndex];
+  const thaiDateString = `วัน ${thaiDayString} ที่ ${day} ${months.thaiMonths[monthIndex]} ${year}`;
 
   const [type, setType] = useState([]);
   const [hightLight, setHightLight] = useState([]);
@@ -59,18 +24,26 @@ const Home = () => {
   const [popUpToggle, setPopUpToggle] = useState(false);
 
   useEffect(() => {
-    async function fetchUsersData() {
-      const { data, error } = await supabase.from("news").select("*");
-      if (error) console.log("Error fetching users:", error);
-      else {
-        console.log("data:", data);
-        const _lastestNews = data.sort((a, b) => b.date - a.date);
+    const config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: "https://clean-ruby-panther.cyclic.app/",
+      headers: {},
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        // console.log("res data>", response.data.result);
+        const _data = response.data.result;
+        const _lastestNews = _data.sort((a, b) => b.date - a.date);
         console.log("_lastestNews", _lastestNews);
         setLastestNews(_lastestNews);
-        setNewsData(data);
-      }
-    }
-    fetchUsersData();
+        setNewsData(_data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
   useEffect(() => {
@@ -79,7 +52,7 @@ const Home = () => {
       .slice(0, 1);
     setHightLight(_highLight);
   }, [type]);
-  console.log("newDetails", newDetails);
+  // console.log("newDetails", newDetails);
   return (
     <>
       <Nav setType={setType} popUpToggle={popUpToggle} />
@@ -222,7 +195,6 @@ const Home = () => {
                       }}
                       src={r.imag_url}
                       className="rounded-lg  md:hover:w-[95%]"
-                      
                     />
                   </div>
                   <div className="text-sm text-slate-700 p-1 overflow-hidden  h-[60px]">
