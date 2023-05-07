@@ -1,17 +1,8 @@
-import { AiOutlineBars } from "react-icons/ai";
 import React, { useState } from "react";
-import { Dropdown } from "primereact/dropdown";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 
-const Nav = ({
-  setType,
-  popUpToggle,
-  isDarkMode,
-  setIsDarkMode,
-  checked,
-  setChecked,
-}) => {
+const Nav = ({ setType, popUpToggle, isDarkMode, checked, setChecked }) => {
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -67,10 +58,10 @@ const Nav = ({
   return (
     <>
       <div
-        className={`w-full flex ${isDarkMode === true ? "bg-slate-800" : ""} `}
+        className={`w-full flex ${isDarkMode === true ? "bg-slate-800" : "bg-white"} `}
       >
         <img
-          className="h-[50px] md:h-[70px] pt-1 "
+          className="h-[50px] pt-1 "
           src={`${isDarkMode === true ? "NewsW.png" : "NewsB.png"}`}
         />{" "}
         <div
@@ -86,7 +77,7 @@ const Nav = ({
       </div>
 
       <div
-        className={`  flex flex-row p-2 font-kanit border-b-4 border-red-500  justify-between w-screen px-4 text-sm md:text-xl cursor-pointer ${
+        className={` font-kanit flex md:mx-auto justify-around py-4  md:py-2 px-4 border-b-4 border-red-500   text-sm md:text-xl cursor-pointer ${
           popUpToggle === true ? "backdrop blur-sm" : ""
         } ${
           isDarkMode === true
@@ -96,45 +87,41 @@ const Nav = ({
       >
         <div
           onClick={() => setType([])}
-          className="active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6"
+          className="active:bg-red-600 hover:bg-red-500  rounded-lg md:px-6 hidden md:block "
         >
           หน้าแรก
         </div>
         <div
           onClick={() => setType("เรื่องฮอต")}
-          className="active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6"
+          className="active:bg-red-600 hover:bg-red-500 rounded-lg md:px-6 hidden md:block "
         >
           เรื่องฮอต
         </div>
         <div
           onClick={() => setType("บันเทิง")}
-          className="active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6"
+          className="active:bg-red-600 hover:bg-red-500  rounded-lg md:px-6 font-kanit hidden md:block "
         >
           บันเทิง
         </div>
         <div
           onClick={() => setType("กีฬา")}
-          className="active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6"
+          className="active:bg-red-600 hover:bg-red-500  rounded-lg md:px-6 hidden md:block "
         >
           กีฬา
         </div>
         <div
           onClick={() => setType("รถยนต์")}
-          className="active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6"
+          className="active:bg-red-600 hover:bg-red-500 md:px-6 rounded-lg md: hidden md:block "
         >
           รถยนต์
         </div>
         <div
           onClick={() => setType("ไอที")}
-          className="active:bg-red-600 hover:bg-red-500 px-1 rounded-lg md:px-6"
+          className="active:bg-red-600 hover:bg-red-500 md:px-6 rounded-lg md: hidden md:block "
         >
           ไอที
         </div>
-
-        {/* <div className="my-auto mr-2">
-          <AiOutlineBars className="text-xl"/>
-        </div> */}
-        <div className="md:mr-7 ">
+        <div className="md:mr-7 cursor-pointer absolute left-2 black md:hidden top-[65%]">
           <select
             onChange={(e) => setType(e.target.value)}
             className={`${

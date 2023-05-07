@@ -3,19 +3,10 @@ import { useState, useEffect } from "react";
 import Nav from "@/components/Nav";
 import { AiFillSignal } from "react-icons/ai";
 import Popup from "@/components/Popup";
-import { Dropdown } from "primereact/dropdown";
 import months from "./months.json";
 import thaiDay from "./thaiDay.json";
-
 import * as React from "react";
-import { styled } from "@mui/material/styles";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
-
-// import MaterialUISwitch from "../components/Darkmode.js"
+import Footer from "../components/Footer.js";
 
 const Home = () => {
   const date = new Date();
@@ -76,6 +67,7 @@ const Home = () => {
 
   return (
     <>
+    <div className="w-full fixed z-10 bg-white">
       <Nav
         setType={setType}
         popUpToggle={popUpToggle}
@@ -83,16 +75,18 @@ const Home = () => {
         isDarkMode={isDarkMode}
         checked={checked}
         setChecked={setChecked}
+        className="w-screen"
       />
+      </div>
       <div
-        className="relative font-kanit h-screen "
+        className="relative  h-screen z-0 "
         class={`${isDarkMode === true ? "dark" : ""}`}
       >
         <div
-          className="my-4 mx-4 flex space-x-5 relative  "
+          className=" mx-4 flex space-x-5 relative  "
           class={`${isDarkMode === true ? "dark" : ""}`}
         >
-          <div className="pt-4 pl-2">
+          <div className="pt-[100px] md:pt-[120px] pl-2 font-kanit">
             {" "}
             {type.length === 0 ? (
               <div className="text-2xl font-bold md:text-4xl font-kanit">
@@ -109,7 +103,7 @@ const Home = () => {
           </div>
         </div>
         <div
-          className={`flex flex-col md:grid grid-cols-2 md:p-4 ${
+          className={`flex flex-col md:grid grid-cols-2 md:p-4 z-20 ${
             popUpToggle === true ? "backdrop blur-sm" : ""
           }`}
         >
@@ -127,16 +121,17 @@ const Home = () => {
                         : "bg-white"
                     }`}
                   >
-                    <div className="md:flex">
+                    <div className="md:flex font-kanit z-30">
                       <div className="my-auto">
-                        <div className="border-b-4 border-red-500">
+                        <div className="border-b-4 border-red-500 z-50">
                           <img
                             onClick={() => {
                               setNewDetails(r);
                               setPopUpToggle(!popUpToggle);
                               backToTop();
+                           
                             }}
-                            className="md:h-[320px] aspect-ratio: 4 / 3 rounded-lg my-1 mx-auto md:hover:h-[340px]"
+                            className="md:h-[320px] aspect-ratio: 4 / 3 rounded-lg my-1 mx-auto md:hover:h-[340px]  hover:h-[350px]"
                             src={
                               r.image_url === null
                                 ? "https://t4.ftcdn.net/jpg/03/48/58/67/360_F_348586758_LzXvNDp7EMIvR98IV049VRPkUqICTbLf.jpg"
@@ -157,7 +152,7 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="indent-12 md:opacity-0  ">{r.content}</div>
+                    <div className="indent-12 md:opacity-0   " >{r.content}</div>
                     <div className="flex flex-col float-right  ">
                       <div className="ml-5">
                         <AiFillSignal className="text-right text-xl" />
@@ -169,7 +164,7 @@ const Home = () => {
                   </div>
                 ))}
           </div>
-          <div className=" w-[95%] mx-auto gap-5 mt-4 md:mt-[-60px] md:h-[580px] md:overflow-hidden space-y-4 md:grid grid-cols-2 p-2 cursor-pointer">
+          <div className="font-kanit w-[95%] mx-auto gap-5 mt-4 md:mt-[-60px] md:h-[580px] md:overflow-hidden space-y-4 md:grid grid-cols-2 p-2 cursor-pointer">
             {newsData &&
               newsData
                 ?.filter((r) => r.category.includes(type))
@@ -180,8 +175,8 @@ const Home = () => {
                       isDarkMode === true ? "bg-slate-800" : ""
                     }  `}
                   >
-                    <div className="md:flex flex-col">
-                      <div className="my-auto">
+                    <div className="md:flex flex-col font-kanit">
+                      <div className="my-auto font-kanit">
                         <img
                           onClick={() => {
                             setNewDetails(r);
@@ -196,11 +191,11 @@ const Home = () => {
                           }
                         />
                       </div>
-                      <div className="text-xl font-bold indent-4 pl-4 md:text-base md:indent-0 md:font-light">
+                      <div className="text-xl font-bold indent-4 pl-4 md:text-base md:indent-0 md:font-light font-kanit">
                         {r.title}
                       </div>
                     </div>
-                    <div className="indent-12 md:hidden">{r.content}</div>
+                    <div className="indent-12 md:hidden font-kanit">{r.content}</div>
                     <div className="flex flex-col float-right md:absolute md:top-[85%] md:right-1">
                       <div className="ml-5 md:ml-7">
                         <AiFillSignal className="text-right text-xl text-green-500" />
@@ -222,7 +217,7 @@ const Home = () => {
           ข่าวล่าสุด{" "}
         </div>
         <div
-          className={`hidden cursor-pointer md:w-[900px] md:grid grid-cols-4 mx-10 my-4 space-y-4 gap-1 h-[430px] overflow-hidden ${
+          className={`hidden cursor-pointer md:w-[900px] md:grid grid-cols-4 mx-10 my-4 space-y-4 gap-1 h-[430px] overflow-hidden font-kanit ${
             popUpToggle === true ? "backdrop blur-sm" : ""
           }`}
         >
@@ -274,6 +269,7 @@ const Home = () => {
           />
         </div>
       </div>
+      {/* <div className="h-[20px] text-center my-auto"><Footer/></div> */}
     </>
   );
 };
