@@ -7,6 +7,16 @@ import { Dropdown } from "primereact/dropdown";
 import months from "./months.json";
 import thaiDay from "./thaiDay.json";
 
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Switch from "@mui/material/Switch";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+
+// import MaterialUISwitch from "../components/Darkmode.js"
+
 const Home = () => {
   const date = new Date();
   const day = date.getDate();
@@ -22,6 +32,13 @@ const Home = () => {
   const [lastestNews, setLastestNews] = useState([]);
   const [newDetails, setNewDetails] = useState([]);
   const [popUpToggle, setPopUpToggle] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [checked, setChecked] = React.useState(true);
+
+  const backToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
 
   useEffect(() => {
     const config = {
@@ -52,16 +69,33 @@ const Home = () => {
       .slice(0, 1);
     setHightLight(_highLight);
   }, [type]);
-  // console.log("newDetails", newDetails);
+
+  useEffect(() => {
+    setIsDarkMode(!isDarkMode);
+  }, [checked]);
+
   return (
     <>
-      <Nav setType={setType} popUpToggle={popUpToggle} />
-      <div className="relative font-kanit">
-        <div className="my-4 mx-4 flex space-x-5 relative  ">
-          <div className="">
+      <Nav
+        setType={setType}
+        popUpToggle={popUpToggle}
+        setIsDarkMode={setIsDarkMode}
+        isDarkMode={isDarkMode}
+        checked={checked}
+        setChecked={setChecked}
+      />
+      <div
+        className="relative font-kanit h-screen "
+        class={`${isDarkMode === true ? "dark" : ""}`}
+      >
+        <div
+          className="my-4 mx-4 flex space-x-5 relative  "
+          class={`${isDarkMode === true ? "dark" : ""}`}
+        >
+          <div className="pt-4 pl-2">
             {" "}
             {type.length === 0 ? (
-              <div className="text-2xl font-bold md:text-4xl">
+              <div className="text-2xl font-bold md:text-4xl font-kanit">
                 เรื่องเด่นวันนี้
               </div>
             ) : (
@@ -70,12 +104,12 @@ const Home = () => {
               </div>
             )}
           </div>
-          <div className="md:mx-5 my-auto md:text-xl text-sm text-slate-400 md:mt-3 mt-[2]">
+          <div className="mx-2 md:mx-5 my-auto md:text-xl text-sm text-slate-400 md:mt-3 mt-[2]">
             {thaiDateString}
           </div>
         </div>
         <div
-          className={`flex flex-col md:grid grid-cols-2 ${
+          className={`flex flex-col md:grid grid-cols-2 md:p-4 ${
             popUpToggle === true ? "backdrop blur-sm" : ""
           }`}
         >
@@ -86,7 +120,13 @@ const Home = () => {
                 ?.filter((r) => r.category.includes(type))
                 .slice(0, 1)
                 ?.map((r) => (
-                  <div className="shadow-lg my-2 h-[500px] overflow-hidden p-4 md:mx-auto cursor-pointer ">
+                  <div
+                    className={`shadow-lg my-2 h-[500px] overflow-hidden p-4 md:mx-auto cursor-pointer rounded-lg ${
+                      isDarkMode === true
+                        ? "bg-slate-800 rounded-lg"
+                        : "bg-white"
+                    }`}
+                  >
                     <div className="md:flex">
                       <div className="my-auto">
                         <div className="border-b-4 border-red-500">
@@ -94,6 +134,7 @@ const Home = () => {
                             onClick={() => {
                               setNewDetails(r);
                               setPopUpToggle(!popUpToggle);
+                              backToTop();
                             }}
                             className="md:h-[320px] aspect-ratio: 4 / 3 rounded-lg my-1 mx-auto md:hover:h-[340px]"
                             src={
@@ -134,13 +175,18 @@ const Home = () => {
                 ?.filter((r) => r.category.includes(type))
                 .slice(1)
                 .map((r, idx) => (
-                  <div className="shadow-lg rounded-lg md:shadow-hidden my-2 h-[400px] md:h-[250px] overflow-hidden p-2 relative ">
+                  <div
+                    className={`shadow-lg rounded-lg md:shadow-hidden my-2 h-[400px] md:h-[250px] overflow-hidden p-2 relative ${
+                      isDarkMode === true ? "bg-slate-800" : ""
+                    }  `}
+                  >
                     <div className="md:flex flex-col">
                       <div className="my-auto">
                         <img
                           onClick={() => {
                             setNewDetails(r);
                             setPopUpToggle(!popUpToggle);
+                            backToTop();
                           }}
                           className="md:h-[175px] md:mx-auto rounded-lg my-1 md:hover:h-[180px] "
                           src={
@@ -184,7 +230,11 @@ const Home = () => {
             ?.filter((r) => r.category.includes(type))
             .sort((a, b) => b.date - a.date)
             .map((r, idx) => (
-              <div className="w-[80%] rounded-lg shadow-lg">
+              <div
+                className={`w-[80%] rounded-lg shadow-lg ${
+                  isDarkMode === true ? "bg-slate-800 " : " "
+                }`}
+              >
                 <div>
                   <div>
                     {" "}
@@ -192,12 +242,17 @@ const Home = () => {
                       onClick={() => {
                         setNewDetails(r);
                         setPopUpToggle(!popUpToggle);
+                        backToTop();
                       }}
                       src={r.imag_url}
                       className="rounded-lg  md:hover:w-[95%]"
                     />
                   </div>
-                  <div className="text-sm text-slate-700 p-1 overflow-hidden  h-[60px]">
+                  <div
+                    className={`text-sm text-slate-700 p-1 overflow-hidden  h-[60px] ${
+                      isDarkMode === true ? "text-white" : ""
+                    }`}
+                  >
                     {r.title}
                   </div>
                   <div className="text-sm font-light float-right mt-2  text-slate-400">
@@ -208,11 +263,15 @@ const Home = () => {
             ))}
         </div>
         <div
-          className={`absolute top-[-50px] right-[0px] md:top-[-50px] md:right-[30%] duration-500 ${
+          className={`absolute top-[-70px] right-[0px] md:top-[-50px] md:right-[30%] duration-500 ${
             popUpToggle === false ? "opacity-0" : "opacity-100"
           }`}
         >
-          <Popup newDetails={newDetails} setPopUpToggle={setPopUpToggle} />
+          <Popup
+            newDetails={newDetails}
+            setPopUpToggle={setPopUpToggle}
+            isDarkMode={isDarkMode}
+          />
         </div>
       </div>
     </>
