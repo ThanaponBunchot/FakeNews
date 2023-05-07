@@ -65,6 +65,7 @@ const Home = () => {
     setIsDarkMode(!isDarkMode);
   }, [checked]);
 
+  console.log("popUpToggle>",popUpToggle);
   return (
     <>
     <div className="w-full fixed z-10 bg-white">
@@ -103,11 +104,13 @@ const Home = () => {
           </div>
         </div>
         <div
-          className={`flex flex-col md:grid grid-cols-2 md:p-4 z-20 ${
+          className={`flex flex-col md:grid grid-cols-2 md:p-4  ${
             popUpToggle === true ? "backdrop blur-sm" : ""
           }`}
         >
-          <div>
+
+          {/* //Highligh  */}
+          <div className="z-30">
             {newsData &&
               newsData
                 .sort((a, b) => b.views - a.views)
@@ -127,11 +130,11 @@ const Home = () => {
                           <img
                             onClick={() => {
                               setNewDetails(r);
-                              setPopUpToggle(!popUpToggle);
+                              setPopUpToggle(true);
                               backToTop();
                            
                             }}
-                            className="md:h-[320px] aspect-ratio: 4 / 3 rounded-lg my-1 mx-auto md:hover:h-[340px]  hover:h-[350px]"
+                            className="md:h-[320px] aspect-ratio: 4 / 3 rounded-lg my-1 mx-auto md:hover:h-[340px]  hover:bg-green-500"
                             src={
                               r.image_url === null
                                 ? "https://t4.ftcdn.net/jpg/03/48/58/67/360_F_348586758_LzXvNDp7EMIvR98IV049VRPkUqICTbLf.jpg"
@@ -164,6 +167,7 @@ const Home = () => {
                   </div>
                 ))}
           </div>
+          {/* List news */}
           <div className="font-kanit w-[95%] mx-auto gap-5 mt-4 md:mt-[-60px] md:h-[580px] md:overflow-hidden space-y-4 md:grid grid-cols-2 p-2 cursor-pointer">
             {newsData &&
               newsData
